@@ -1,0 +1,24 @@
+<div class="carousel-block">
+    <a href="#"><%= image_tag product.image_url %></a>
+    <div class="carousel-content">
+        <h3><%= link_to product.name, '#' %></h3>
+        <hr>
+        <p class="description">
+          Category: <%= product.category %>
+          <br>
+          Amount: <%= product.amount %>
+          <br>
+          Use By: <%= product.use_by || 'n/a' %>
+        </p>
+        <%= form_tag home_add_shopping_item_path do %>
+          <%= hidden_field_tag :image_url, product.image_url %>
+          <%= hidden_field_tag :name, product.name %>
+          <%= hidden_field_tag :price_cents, product.price_cents %>
+          <div class="right-block">
+            <p>$<%= product.price_cents / 100 %></p>
+            <a class="text-hide" style="z-index: 1000" onclick="$(this).closest('form').submit();">Add to cart</a>
+          </div>
+        <% end %>
+    </div>
+</div>
+

@@ -1,0 +1,78 @@
+<!-- Owl carousel -->
+<div class="myowl">
+  <% @products.each do |product| %>
+    <%= render partial: 'product', locals: { product: product, first: product.id == @products.first.id } %>
+<% end %>
+</div>
+
+<section class="product-list">
+  <div class="container">
+    <div class="product-box row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h3>Inflight Services to Your Comfort</h3>
+        <div class="product-carousel owl-carousel list-unstyled">                        
+
+          <div class="item">
+            <div class="image-wrap">
+              <a href="#">
+                <%= image_tag 'multiplayer.jpg', class: "img-responsive" %>
+              </a>
+            </div>
+            <div class="product-name">
+              <a href="#">Multiplayer Game</a>
+              <div class="rating pull-right">
+                <div class="rating-stars" style="width: 100%"></div>
+              </div>
+              <span class="sticker-wrap">
+                <span class="new-sticker img-circle">NEW</span>
+              </span>
+            </div> 
+          </div>
+
+          <div class="item">
+            <div class="image-wrap">
+              <a href="#">
+                <%= image_tag 'seatupgade.jpg', class: "img-responsive" %>
+              </a>
+            </div>
+            <div class="product-name">
+              <a href="#">Seat Upgrade</a>
+              <div class="rating pull-right">
+                <div class="rating-stars" style="width: 80%"></div>
+              </div>
+            </div> 
+          </div>
+
+          <div class="item">
+            <div class="image-wrap">
+              <a href="#">
+                <%= image_tag 'jukebox.jpg', class: "img-responsive" %>
+              </a>
+            </div>
+            <div class="product-name">
+              <a href="#">Jukebox</a>
+              <div class="rating pull-right">
+                <div class="rating-stars" style="width: 100%"></div>
+              </div>
+            </div> 
+          </div>
+
+          <div class="item">
+            <div class="image-wrap">
+              <a href="#">
+                <%= image_tag 'internet.jpg', class: "img-responsive" %>
+              </a>
+            </div>
+            <div class="product-name">
+              <a href="#">Internet Access</a>
+              <div class="rating pull-right">
+                <div class="rating-stars" style="width: 80%"></div>
+              </div>
+            </div> 
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

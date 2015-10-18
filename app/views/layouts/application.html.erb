@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Smart Cabin</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+        <![endif]-->
+        <script src="/js/vendor/pace.min.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/pace.css">
+        <link rel="stylesheet" href="/css/custom-jquery.sidr.dark.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/owl.carousel.css">
+        <link rel="stylesheet" href="/css/owl.theme.css">
+        <link rel="stylesheet" href="/css/jquery.selectBoxIt.css">
+        <link rel="stylesheet" href="/css/animate.css">
+        <link rel="stylesheet" href="/css/homepage.css">
+
+      <%= csrf_meta_tags %>
+      <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="blur-bk">
+            <nav class="container navbar navbar-default" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="menu-collapse">
+                    <ul class="nav navbar-nav navbar-left" id="menu-bar">  
+                        <!-- Sidebar visible on desktop and tablet-->
+                        <li class="hidden-xs"><a id="left-sidebar" href="#sidr" class="sidebar">+</a></li>
+
+                        <!-- Sidebar visible only on phone -->
+                        <li class="visible-xs panel dropdown">
+                            <a data-toggle="collapse" data-parent="#menu-bar" href="#collapseOne" class="sidebar">+</a>
+                            <ul id="collapseOne" class="panel-collapse collapse list-unstyled">
+                                <li class="panel dropdown">
+                                    <a class="submenu-arrow" data-toggle="collapse" href="#collapseTwo">Categories <b class="caret"></b></a>
+                                    <ul id="collapseTwo" class="panel-collapse collapse list-unstyled submenu-level">
+                                        <li><a href="category.html">Starters</a></li>
+                                        <li><a href="category.html">Main dishes</a></li>
+                                        <li class="panel dropdown">
+                                            <a class="submenu-arrow" data-toggle="collapse" href="#collapseThree">Dessert <b class="caret"></b></a>
+                                            <ul id="collapseThree" class="panel-collapse collapse list-unstyled submenu-level">
+                                                <li><a href="category.html">Starters</a></li>
+                                                <li><a href="category.html">Main dishes</a></li>
+                                                <li><a href="category.html">Dessert</a></li>
+                                                <li><a href="category.html">Last category</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="category.html">Last category</a></li>
+                                    </ul> 
+                                </li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Reservation</a></li>
+                                <li><a href="#">Our blog</a></li>
+                                <li><a href="#">Custom item</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Language menu visible on desktop and tablet -->
+                        <li class="hidden-xs visible-sm visible-md visible-lg dropdown">
+                            <a href="#" class="language dropdown-toggle" data-toggle="dropdown">en</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">english</a></li>
+                                <li><a href="#">french</a></li>
+                                <li><a href="#">german</a></li>
+                            </ul>
+                        </li>
+                        <!-- Language menu visible only on phone -->
+                        <li class="visible-xs hidden-sm hidden-md hidden-lg panel dropdown">
+                            <a data-toggle="collapse" data-parent="#menu-bar" href="#lang-collapse" class="language">en</a>
+                            <ul id="lang-collapse" class="panel-collapse collapse list-unstyled">
+                                <li><a href="#">english</a></li>
+                                <li><a href="#">french</a></li>
+                                <li><a href="#">german</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Currency menu visible on desktop and tablet-->
+                        <li class="hidden-xs visible-sm visible-md visible-lg dropdown">
+                            <a href="#" class="currency dropdown-toggle" data-toggle="dropdown">$</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">USD</a></li>
+                                <li><a href="#">EUR</a></li>
+                                <li><a href="#">GBP</a></li>
+                            </ul>
+                        </li>
+                        <!-- Currency submenu visible only on phone -->
+                        <li class="visible-xs hidden-sm hidden-md hidden-lg panel dropdown">
+                            <a  data-toggle="collapse" data-parent="#menu-bar" href="#currency-collapse" class="currency">$</a>
+                            <ul id="currency-collapse" class="panel-collapse collapse list-unstyled">
+                                <li><a href="#">USD</a></li>
+                                <li><a href="#">EUR</a></li>
+                                <li><a href="#">GBP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Right submenu visible on desktop and tablet -->
+                    <ul class="hidden-xs nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="search dropdown-toggle" data-toggle="dropdown">search</a>
+                            <form class="dropdown-menu wrap-form hidden-xs" action="search.html">
+                                <input type="text" name="search" placeholder="type your text...">
+                                <input type="submit" name="search" value="" class="pull-right">
+                            </form>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="account dropdown-toggle" data-toggle="dropdown">account</a>
+                            <ul class="dropdown-menu" style="font-size: 40px; padding: 3px 20px;">
+                              <li><a href="#">Flight: <%= @base[:flight_no] %></a></li>
+                              <li><a href="#">Seat: <%= @base[:seat] %></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="shop dropdown-toggle" data-toggle="dropdown">shopping cart</a>
+                            <!-- empty cart block
+                            <ul class="dropdown-menu wrap-empty-cart hidden-xs">
+                                <li>you have no items in your shopping cart</li>
+                            </ul>
+                            -->
+                            <!-- cart with products -->
+                            <div class="dropdown-menu wrap-cart hidden-xs">
+                              <% @shopping_items.each do |item| %>
+                                <div class="wrap-cart-products">
+                                    <a href="#" class="product-image"><%= image_tag item.image_url, size: '90x81' %></a>
+                                    <div class="product-title">
+                                        <a href="#"><%= item.name %></a><br>
+                                        <p><%= item.amount %> <span>x $<%= item.price_cents / 100 %></span></p>
+                                    </div>
+                                    <div class="right-icons pull-right">
+                                        <a href="#">i</a>
+                                        <a href="#">x</a>
+                                    </div>
+                                </div>
+                                <hr>
+                              <% end %>
+                              <div class="product-buttons pull-right">
+                                    <a href="#">view cart</a>
+                                    <a href="#"> checkout</a>
+                              </div>
+                            </div><!-- /cart with products --> 
+                        </li>
+                    </ul>
+
+                    <!-- Right submenu visible only on phone -->
+                    <ul class="visible-xs hidden-sm hidden-md hidden-lg nav navbar-nav navbar-right">
+                        <li class="dropdown"><a href="#" class="search">search</a></li>
+                        <li class="dropdown"><a href="#" class="account">search</a></li>
+                        <li class="dropdown"><a href="#" class="shop">shopping cart</a> </li>
+                    </ul>
+                </div><!-- /navbar-collapse -->
+
+                <h1 class="logo hidden-xs"><%= link_to image_tag('athena.png'), root_path %></h1>
+                <!-- /container-fluid -->
+            </nav>
+
+            <!-- Dropdown left menu visible on desktop and tablet-->
+            <div id="sidr" class="hidden-xs">
+              <div class="row">
+                <ul class="social col-10-md">
+                    <li><a href="#" class="facebook">facebook</a></li>
+                    <li><a href="#" class="google">google plus</a></li>
+                    <li><a href="#" class="twitter">twitter</a></li>
+                    <li><a href="#" class="pinterest">pinterest</a></li>
+                </ul>
+                <a id="left-sidebar-close" href="#sidr" class="sidebar text-hide col-md-2" title="Close">Close</a>
+              </div>  
+              <div class="row">
+                <ul class="left-menu col-md-12">
+                  <li>
+                    <h1>Welcome on</h1>
+                    <p>Flight: <%= @base[:flight_no] %><br>Seat: <%= @base[:seat] %></p>
+                  </li>
+                  <li>
+                    <%= form_tag home_flight_search_path do %>
+                      <h1>Next Flight:</h1>
+                      <hr>
+                      <div class="form-group">
+                        <%= label_tag 'departure_airport_code', 'Departure', class: 'control-label' %>
+                        <div class="controls">
+                          <%= select_tag 'departure_airport_code', airport_options, class: 'form-control' %>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <%= label_tag 'arrival_airport_code', 'Arrival', class: 'control-label' %>
+                        <div class="controls">
+                          <%= select_tag 'arrival_airport_code', airport_options, class: 'form-control' %>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <%= label_tag 'departure_date', 'Date', class: 'control-label' %>
+                        <div class="controls">
+                          <%= text_field_tag 'departure_date', '', class: 'form-control' %>
+                        </div>
+                      </div>
+                    <% end %>
+                  </li>
+                </ul>
+              </div>  
+              </div><!--/dropdown left menu visible on desktop and tablet-->
+
+
+              <%= yield %>
+
+        </div>
+    </body>
+        <script src="/js/vendor/jquery-1.10.1.min.js"></script>
+        
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/jquery.sidr.min.js"></script>
+        <script src="/js/owl.carousel.js"></script>
+        <script src="/js/owl.carousel.improved.js"></script>
+        <script src="/js/vendor/jquery-ui.js"></script>
+        <script src="/js/vendor/jquery.selectBoxIt.min.js"></script>
+        <script src="/js/vendor/jquery.fitvids.js"></script>
+        <script src="/js/vendor/jquery.elevatezoom.js"></script>
+        <script src="/js/viewportchecker.js"></script> 
+
+        <script src="/js/main.js"></script>
+    
+</html>

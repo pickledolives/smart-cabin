@@ -1,0 +1,148 @@
+#sidr {
+    overflow: hidden;
+    left:-410px;
+}
+
+.sidr{
+    display:none;
+    position:absolute;
+    position:fixed;
+    top:0;
+    height:100%;
+    z-index:999999;
+    width:410px;
+    overflow-x:none;
+    overflow-y:auto;
+    font-family:'Alegreya Sans',Arial,Times New Roman,sans-serif;
+    font-size:36px;
+    font-weight: 100;
+    background:#000;
+    color:#fff;
+    padding: 30px;
+}
+
+.sidr ul.submenu {
+    display:none;
+}
+
+/*---Social icons---*/
+.sidr .social {
+    height: 40px;
+    margin-bottom: 60px;
+    width: 200px;
+    float: left;
+}
+
+.sidr .social li {
+    width: 35px;
+    float: left;
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+.sidr .social li a {
+    text-indent: -99999px;
+}
+
+.sidr .social li a:hover {
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -o-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+}
+
+.sidr .social .facebook {
+    background: url("../img/saria-sprites.png") no-repeat 2px -158px;   
+}
+
+.sidr .social .google {
+    background: url("../img/saria-sprites.png") no-repeat -78px -158px;   
+}
+
+.sidr .social .twitter {
+    background: url("../img/saria-sprites.png") no-repeat -158px -158px;   
+}
+
+.sidr .social .pinterest {
+    background: url("../img/saria-sprites.png") no-repeat -238px -158px;   
+}
+
+/*---End Social icons---*/
+
+/*---Sidr close button---*/
+
+#left-sidebar-close {
+    float: right;
+    width: 20px;
+    height: 35px;
+    background: url("../img/saria-sprites.png") no-repeat -318px -160px;
+}
+
+/*---Sidr close button---*/
+/*---Menu---*/
+.sidr .left-menu {
+    padding-left: 80px;
+}
+
+.sidr .left-menu a {
+    display: inline-block;
+}
+
+.sidr .left-menu a:hover {
+    -moz-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+    color: #eb6f4d;
+}
+
+.sidr .submenu a {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.sidr .second-level {
+    margin-left: 20px;
+}
+
+/*---End Menu---*/
+
+.sidr ul{
+    display:block;
+    margin:0 0 15px;
+    padding:0;
+}
+.sidr ul li{
+    display:block;
+    margin:0;
+    line-height:48px;
+}
+
+.sidr ul li a{
+    display:block;
+    text-decoration:none;
+    color:#fff
+}
+.sidr ul li ul{
+    border-bottom:none;
+    margin:0
+}
+.sidr ul li ul li{
+    line-height:40px;
+    font-size:13px
+}
+.sidr ul li ul li:last-child{
+    border-bottom:none
+}
+
+.sidr ul li ul li a {
+    color:rgba(255,255,255,0.8);
+    padding-left:30px
+}
+
+
+/*---Map---*/
+.sidr .map {
+    margin-top: 80px;
+}
+/*---End Map---*/
+

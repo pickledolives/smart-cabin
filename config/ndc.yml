@@ -1,0 +1,45 @@
+label: KRO
+
+rest:
+  url: http://iata.api.mashery.com/kronos/api
+  headers:
+    Accept: application/xml
+    Content-Type: application/xml
+    Authorization-Key: zawj8bkbax6h9rz9cjqjgyw9
+
+ndc:
+  Document:
+    Name: NDC Wrapper
+    ReferenceVersion: "1.0"
+  Party:
+    Sender:
+      ORA_Sender:
+        AirlineID: C9
+        Name: Kronos Air
+        AgentUser:
+          Name: Hackit Team
+          Type: TravelManagementCompany
+          PseudoCity: A4A
+          AgentUserID: hackit
+          IATA_Number: "00001001"
+  Participants:
+    Participant:
+      AggregatorParticipant:
+        Name: Hackit NDC Gateway
+        AggregatorID: WAD-01001
+  Parameters:
+    CurrCodes:
+      CurrCode: EUR
+  Preference:
+    AirlinePreferences:
+      Airline:
+        AirlineID: C9
+    FarePreferences:
+      FarePreferences:
+        Types:
+          Type:
+            Code: '759'
+    CabinPreferences:
+      CabinType:
+        Code: M
+        Definition: Economy/coach discounted
